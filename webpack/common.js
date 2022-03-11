@@ -1,5 +1,7 @@
 const path = require('path').resolve;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack')
+
 
 module.exports = {
 	entry: {
@@ -26,6 +28,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin ({
       template: path(__dirname, '..', 'public', 'index.html'),
-    })
+    }),
+	new Dotenv()
   ]
 }

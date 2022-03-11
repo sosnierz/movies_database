@@ -1,20 +1,40 @@
 import React, { useState } from 'react';
-
+import axios from 'axios';
 import block from 'bem-css-modules';
 import { default as SearchMovieStyles} from './SearchMovie.module.scss'
 
-import MovieList from '../MovieList/MovieList';
+import MoviesResult from '../MoviesResult/MoviesResult';
 
 
 const style = block(SearchMovieStyles)
 
 const SearchMovie = () => {
-    const[ input, setInput] = useState("");
+    const[input, setInput] = useState("");
+    const [results, setResults] = useState([])
+
+    const apiURL = "https://api.themoviedb.org/3/search/movie";
 
     const handleInput =(e) =>{
         e.preventDefault();
         setInput(e.target.value);
-    }
+     
+          axios.get(apiURL, {
+            params: {
+              api_key: '2f48aca7b5860716e40825be5af179b4',
+              query: `${e.target.value}`
+            }
+          }).then(res => {
+            setResults(res.data.results);
+            console.log(results)
+                 
+          });
+        };
+    
+        const movies = results.map(movie => (
+            <MoviesResult key={movie.id}
+               {...movie} movie={movie}/>
+        ))
+    
     return ( 
         <main className={style()}>
             <div className={style('content')}>
@@ -24,9 +44,10 @@ const SearchMovie = () => {
                     value={input}
                     onChange={handleInput}/>
                 </div>
-                <article>
-                    <MovieList />
-                </article>
+                {movies.length>0?<section>
+                    <h1>Results: </h1>
+                    {movies}
+                </section> : null}
             </div>   
       
         </main>
