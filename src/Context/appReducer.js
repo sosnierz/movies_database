@@ -4,6 +4,9 @@ export default (state, action) => {
         case "ADD_TO_WATCHLIST":
           return {
             ...state,
+            watched: state.watched.filter(
+              (movie) => movie.id !== action.payload.id
+            ),
             watchlist:[action.payload, ...state.watchlist]
         };
         
@@ -28,6 +31,14 @@ export default (state, action) => {
                 (movie) => movie.id !== action.payload
               ),
         };
+        case 'CLEAR_ALL_WATCHLIST':
+          return {
+            ...state, watchlist:[]
+          };
+        case 'CLEAR_ALL_WATCHED':
+          return {
+            ...state, watched:[]
+          };
         default:
          console.warn(`Don't have this type action: ${action.type}`);
          return state;

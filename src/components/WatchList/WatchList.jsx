@@ -10,13 +10,15 @@ import { default as WatchListStyles} from './WatchList.module.scss'
 const style = block(WatchListStyles)
 
 const WatchList = () => {
-    const { watchlist } = useContext(MoviesContext);
-
+    const { watchlist, clearWatchlist } = useContext(MoviesContext);
+	
 	return (
 		<div className={style('')}>
 			<h1 >My Watchedlist</h1>
+			<button onClick={()=>clearWatchlist()}>Clear All Watchlist</button>
 			<div >
                   {watchlist.length < 1 ? <h2>Your watchedlist of movies is empty! Add some!</h2>:
+				  
                     watchlist.map((movie) => 
                     <MoviesToWatch key = {movie.id} movie= {movie} data="watchlist"/>)}
 		    </div>

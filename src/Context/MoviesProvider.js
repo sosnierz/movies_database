@@ -52,6 +52,18 @@ const  MoviesProvider = (props) => {
    payload: id 
  });
  };
+ const clearWatched = () =>  {
+    dispatch({
+   type: "CLEAR_ALL_WATCHED", 
+   payload: []
+ });
+ };
+ const clearWatchlist = () =>  {
+    dispatch({
+   type: "CLEAR_ALL_WATCHLIST", 
+   payload: [] 
+ });
+ };
 
 
     return (
@@ -61,7 +73,9 @@ const  MoviesProvider = (props) => {
             addToWatched,
             addToWatchlist,
             removeFromWatched,
-            removeFromWatchlist       
+            removeFromWatchlist,
+            clearWatched,
+            clearWatchlist       
             }}>
             {props.children}
         </MoviesContext.Provider>
