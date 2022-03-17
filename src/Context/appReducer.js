@@ -19,13 +19,13 @@ export default (state, action) => {
         case "REMOVE_FROM_WATCHLIST":
            return {...state,
            watchlist: state.watchlist.filter(
-             (movie) => movie.id !== action.payload.id
+             (movie) => movie.id !== action.payload
            ),
         };
         case "REMOVE_FROM_WATCHED":
             return {  ...state,
               watched: state.watched.filter(
-                (movie) => movie.id !== action.payload.id
+                (movie) => movie.id !== action.payload
               ),
         };
         default:

@@ -10,7 +10,7 @@ import { default as WatchListStyles} from './WatchList.module.scss'
 const style = block(WatchListStyles)
 
 const WatchList = () => {
-    const { watchlist, addToWatched, removeFromWatchlist } = useContext(MoviesContext);
+    const { watchlist } = useContext(MoviesContext);
 
 	return (
 		<div className={style('')}>
@@ -18,17 +18,7 @@ const WatchList = () => {
 			<div >
                   {watchlist.length < 1 ? <h2>Your watchedlist of movies is empty! Add some!</h2>:
                     watchlist.map((movie) => 
-                   <div>
-                        <MoviesToWatch key = {movie.id} movie= {movie}/>                  
-                        <div className={style('footer')}>
-                            <button onClick={() => handleOnClick(movie.title, movie.overview, movie.poster_path, movie.release_date,  movie.vote_average)}>More info</button>
-                            <button
-                            onClick={() => removeFromWatchlist(movie.id) }>Remove from watchlist</button>
-                            <button  
-                            onClick={() =>addToWatched(movie)}>  Add to watched
-                            </button>  
-                        </div> 
-                </div>)}
+                    <MoviesToWatch key = {movie.id} movie= {movie} data="watchlist"/>)}
 		    </div>
         </div>
 	);
