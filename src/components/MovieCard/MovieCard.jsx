@@ -1,24 +1,22 @@
 import React from 'react';
 
-
 import Modal from '../Modal/Modal';
+
+
 import block from 'bem-css-modules';
-import { default as MovieCardStyles} from './MovieCard.module.scss'
-
-
+import { default as MovieCardStyles} from './MovieCard.module.scss';
 const style = block(MovieCardStyles)
 
 
 
-const MovieCard = ( { handleOnClose, isModalOpen, title, overview, poster_path, release_date,  vote_average}) => {
+const MovieCard = ({ handleOnClose, isModalOpen, title, overview, poster_path, release_date,  vote_average}) => {
   
   const handleOnCloseModal = e =>{
     e.preventDefault();
     handleOnClose();
 }
 
-
-  return (
+return (
   <Modal handleOnClose={handleOnClose} isOpen={isModalOpen} shouldBeCloseOnOutsideClick={true}>
           <div className={style('content')}>
           <div className={style('header')}>
@@ -32,10 +30,7 @@ const MovieCard = ( { handleOnClose, isModalOpen, title, overview, poster_path, 
                 <p>Ranking: {vote_average}</p>
 
           </div>
-          <div className={style('footer')}>
-            <button className={style('button')}>Add to watchlist</button>
-            <button className={style('button')}>Add to watched</button>
-        </div>
+         
         </div> 
 
      
