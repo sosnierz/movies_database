@@ -61,12 +61,12 @@ const MoviesList = ({movie}) => {
              <button className={style('btn')}  
               disabled={disabledWatchList}
               onClick={() => {addToWatchlist(movie)}}>
-              <FontAwesomeIcon className={style('icon')} icon={faPlus} />watchlist</button>
+              <FontAwesomeIcon className={style('icon')} icon={faPlus} /> <p className={style('btn-text')}>watchlist</p></button>
            
               <button className={style('btn')}  
               disabled={disabledWatched}
               onClick={() => {addToWatched(movie)}}>
-              <FontAwesomeIcon className={style('icon')} icon={faPlus} />watched</button>  
+              <FontAwesomeIcon className={style('icon')} icon={faPlus} /><p className={style('btn-text')}>watched</p></button>  
           </div> 
         
           <MovieCard 
