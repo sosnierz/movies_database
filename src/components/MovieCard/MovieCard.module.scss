@@ -1,0 +1,60 @@
+.section{
+    height: 100%;
+    &__button{
+        font-size: 30px;
+        border: none;
+        padding-left: 10px;
+        background-color: white;
+    }
+
+    &__container{
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: space-between;
+       align-content: stretch;
+        padding: 8px 10px; 
+        width: 100%;
+        height: calc(100% - 30px);
+        
+    }
+    &__img, &__content{
+        align-self: stretch;
+    }
+    &__img{
+        flex-basis: 35%;
+    }
+    &__content {
+        flex-basis: 65%;
+    }
+
+    &__image{
+        width: 100%;
+        height: 100%;
+        padding-right: 8px;
+    }
+    &__title{
+        text-align: center;
+        font-size: 23px;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+
+    &__information{
+        margin-top: 20px;
+        text-align: justify;
+        letter-spacing: 1px;
+        
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: auto ;
+        row-gap: 10px;
+        column-gap: 10px;
+        
+    }
+    
+   
+  
+        
+  
+}

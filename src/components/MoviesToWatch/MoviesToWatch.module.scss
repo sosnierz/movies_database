@@ -1,0 +1,36 @@
+.moviesAtList{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &__img{
+        z-index: 0;
+    }
+    &__image{
+        width: 100%;
+        height: 100%;
+    }
+    &__buttons{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        background-color: black;
+        opacity: 0.8;
+        text-align: center;
+    }
+    &__trash,  &__transfer{
+        background-color: rgb(98, 94, 94);
+        color: white;
+        padding: 5px 20px;
+    }
+    &__icon{
+        margin-right: 5px;
+    }
+   
+
+    
+}
+
