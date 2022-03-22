@@ -12,15 +12,23 @@ const Watched = () => {
        
 
 	return (
-		<div className={style('')}>
-			<h1 >My Watchedlist</h1>
-           <button onClick={()=>clearWatched()}>Clear All Watched</button>
-			<div >
-                  {watched.length <1 ? <h2>Your watchedlist of movies is empty! Add some!</h2>:
-                    watched.map((movie) => 
-                    <MoviesToWatch key = {movie.id} movie= {movie} data="watched"/>)}
-		    </div>
-        </div>
+		<div className={style('')}>				
+        	<h2 className={style('title')}>My Watchedlist</h2>
+			<button 
+				className={style('btnClear')}
+				onClick={()=>clearWatched()}>
+				Clear List
+			</button>
+			<hr className={style('line')}/>
+			<div className={style('list')}>
+          		{watched.length <1 ? 
+				<h3 className={style('emptyList')}>Your watchedlist of movies is empty! 
+				<span className={style('text')}>Add some!</span>
+				</h3>:
+          		watched.map((movie) => 
+          			<MoviesToWatch key = {movie.id} movie= {movie} data="watched"/>)}
+			</div>
+    	</div>
 	);
 };
  

@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfo } from '@fortawesome/free-solid-svg-icons';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
-const MoviesList = ({movie, results}) => {
+const MoviesList = ({movie}) => {
   
   const {watched, watchlist, addToWatched, addToWatchlist} = useContext(MoviesContext); 
   const [movieData, setMovieData] = useState([]);

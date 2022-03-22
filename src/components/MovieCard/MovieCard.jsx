@@ -1,6 +1,8 @@
 import React from 'react';
-
 import Modal from '../Modal/Modal';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquareXmark } from '@fortawesome/free-solid-svg-icons';
 
 
 import block from 'bem-css-modules';
@@ -17,25 +19,39 @@ const MovieCard = ({ handleOnClose, isModalOpen, title, overview, poster_path, r
 }
 
 return (
-  <Modal handleOnClose={handleOnClose} isOpen={isModalOpen} shouldBeCloseOnOutsideClick={true}>
-          <div className={style('content')}>
-          <div className={style('header')}>
-            <h4 className={style('title')}>{title}</h4>
-            <button onClick={handleOnCloseModal} className={style('button')}>X</button>
-          </div>
-          <div className={style('body')}>
-              <img src={`https://image.tmdb.org/t/p/w200${poster_path}`} />
-                <p>About: {overview}</p>
-                <p>Premiere:{release_date}</p>
-                <p>Ranking: {vote_average}</p>
-
-          </div>
-         
-        </div> 
-
-     
- </Modal>
-    )
+  <Modal 
+  handleOnClose={handleOnClose} 
+  isOpen={isModalOpen} 
+  shouldBeCloseOnOutsideClick={true}>
+          <section className={style()}>
+              <button 
+              onClick={handleOnCloseModal} 
+              className={style('button')}> 
+              <FontAwesomeIcon 
+              className={style('icon-info')} 
+              icon={faSquareXmark} />
+              </button>
+              <div className={style('container')}>
+                <div className={style('img')}>
+                  <img className={style('image')}src={`https://image.tmdb.org/t/p/w200${poster_path}`} />  
+                </div>
+                <div className={style('content')}>
+                  <h4 className={style('title')}>{title}</h4>
+                  <div className={style('information')}>
+                    <span>About:</span>
+                    <span>{overview}</span>
+                   
+                    <span>Premiere:</span>
+                    <span>{release_date}</span>
+  
+                    <span>Ranking:</span>
+                    <span> {vote_average}</span>
+                  </div>
+                </div>
+            </div>
+         </section>      
+  </Modal>
+);
 }
  
 export default MovieCard;

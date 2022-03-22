@@ -28,6 +28,9 @@ const SearchMovie = () => {
             console.log(results)
                  
           });
+        if(e.target.value === ''){
+          setResults([])
+        }
         };
   
         const movies = results.map(movie => (
@@ -38,14 +41,17 @@ const SearchMovie = () => {
         <main className={style()}>
             <div className={style('content')}>
                 <div className={style('wrapper-input')}>
-                    <input type='text' 
-                    placeholder='Search for a movie'
+                    <input className={style('input')}type='text' 
+                    placeholder='Movie title'
                     value={input}
                     onChange={handleInput}/>
                 </div>
-                {movies.length>0?<section>
-                    <h1>Results: </h1>
+                {movies.length>0?
+                <section className={style('section')}>
+                    <h2>Results: </h2>
+                    <ul className={style('list-group')}>
                       {movies}
+                    </ul>  
                 </section> : null}
             </div>   
         </main>
