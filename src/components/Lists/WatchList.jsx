@@ -4,17 +4,15 @@ import { MoviesContext } from '../../Context/MoviesProvider';
 
 
 import block from 'bem-css-modules';
-import { default as WatchListStyles} from './WatchList.module.scss'
-
-
-
-const style = block(WatchListStyles)
+import { default as ListsStyles} from './Lists.module.scss'
+const style = block(ListsStyles)
 
 const WatchList = () => {
     const { watchlist, clearWatchlist } = useContext(MoviesContext);
 	
 	return (
-		<div className={style('')}>				<h2 className={style('title')}		>My Watchlist</h2>
+		<div className={style('')}>				
+		<h2 className={style('title')}>My Watchlist</h2>
 			
 			<button 
 				className={style('btnClear')}

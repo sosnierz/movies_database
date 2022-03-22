@@ -3,8 +3,8 @@ import MoviesToWatch from '../MoviesToWatch/MoviesToWatch';
 import { MoviesContext } from '../../Context/MoviesProvider';
 
 import block from 'bem-css-modules';
-import { default as WatchedStyles} from './Watched.module.scss';
-const style = block(WatchedStyles)
+import { default as ListsStyles} from './Lists.module.scss'
+const style = block(ListsStyles)
 
 const Watched = () => {
     const { watched, clearWatched } = useContext(MoviesContext);

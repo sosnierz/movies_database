@@ -2,8 +2,8 @@ import React from 'react';
 import { Route,  HashRouter as Router, Switch } from 'react-router-dom';
 
 import SearchMovie from './components/SearchMovie/SearchMovie';
-import Watched from './components/Watched/Watched';
-import WatchList from './components/WatchList/WatchList';
+import Watched from './components/Lists/Watched';
+import WatchList from './components/Lists/WatchList';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import './App.scss';

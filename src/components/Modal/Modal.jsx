@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
+
 import block from 'bem-css-modules'
-
 import { default as ModalStyles } from './Modal.module.scss';
-
-
 const style = block(ModalStyles);
+
+
 
 const Modal = ({ children, handleOnClose, isOpen, shouldBeCloseOnOutsideClick}) => {
 
