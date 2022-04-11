@@ -3,19 +3,19 @@
 
 
 
-In this project you can create your own lists with films, wchich would like to watch or you have already watched.
-You can find there information about each movie:
+In this project you can create your own lists with films, which you would like to watch or have already watched.
+There you can find information about each movie:
 - title
-- shorts description
+- short description
 - year of production
 - ranking
 
 ## Motivation
-I really wanted to create something using JavaScript library - React. It is currently the most commonly used front-end development technology in the world, that's why I had decided use it in my project. Additionally I made it using free online database.
+I really wanted to create something using JavaScript library - React. It is currently the most commonly used front-end development technology in the world, that's why I had decided to use it in my project. Additionally I used free online database.
 
 ## Tech
 
-In this project I used to:
+In this project I used:
 
 - [SASS](https://sass-lang.com/documentation)
 - [React.js](https://reactjs.org/)
@@ -37,7 +37,7 @@ npm install
 ```sh
 npm start
 ```
-4. If command is running but your web browser hasn't opened, then copy this link http://localhost:3000 in your web browser.
+4. If command is running but your web browser hasn't opened, copy this link http://localhost:3000 into your web browser.
 
 ## Plugins
-I used to free movie DB: https://www.themoviedb.org
+I used free movie DB: https://www.themoviedb.org
