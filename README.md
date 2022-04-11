@@ -11,7 +11,7 @@ You can find there information about each movie:
 - ranking
 
 ## Motivation
-I really wanted to create something using JavaScript library - React. It is currently the most commonly used front-end development technology in the world.that's why I had decided use it in my project. Additionally I made it using free online database.
+I really wanted to create something using JavaScript library - React. It is currently the most commonly used front-end development technology in the world, that's why I had decided use it in my project. Additionally I made it using free online database.
 
 ## Tech
 
