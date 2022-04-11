@@ -24,7 +24,8 @@ In this project I used:
 - [Axios](https://axios-http.com/docs/intro)
 - [Node.js](https://nodejs.dev/)
 
-## Screenshots
+## Screenshot
+![PrintMovie](https://user-images.githubusercontent.com/37373004/162730560-57f864cc-944f-40ed-b7e3-56856f1c2609.png)
 
 ## Installation
 
